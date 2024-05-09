@@ -458,7 +458,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="5" column="0" colspan="3">
-           <widget class="QLineEdit" name="PassPhraseCombo">
+           <widget class="QLineEdit" name="PassPhraseLine">
             <property name="echoMode">
              <enum>QLineEdit::Password</enum>
             </property>
@@ -546,6 +546,25 @@ li.checked::marker { content: &quot;\2612&quot;; }
           </item>
          </layout>
         </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="RSAInfoLabel">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>All fields mus be filled</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="Symmetric_Page">
@@ -568,7 +587,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
           <item>
            <widget class="QPushButton" name="AESClearButton">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <property name="text">
              <string>Clear</string>
@@ -635,7 +654,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </widget>
           </item>
           <item row="1" column="0" colspan="3">
-           <widget class="QLineEdit" name="PathLineEdit_2">
+           <widget class="QLineEdit" name="AESPathLineEdit">
             <property name="placeholderText">
              <string>Choose a Directory</string>
             </property>
@@ -667,12 +686,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
             </property>
             <item>
              <property name="text">
-              <string>Hex</string>
+              <string>Base64</string>
              </property>
             </item>
             <item>
              <property name="text">
-              <string>Base64</string>
+              <string>Hex</string>
              </property>
             </item>
            </widget>
@@ -810,6 +829,25 @@ li.checked::marker { content: &quot;\2612&quot;; }
            </size>
           </property>
          </spacer>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLabel" name="AESInfoLabel">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>All fields must be filled</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>

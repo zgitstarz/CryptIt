@@ -15,6 +15,8 @@ QPalette default_palette()
 
     palette.setColor(QPalette::Base, QColor(0x54, 0x54, 0x54));
 
+    palette.setColor(QPalette::AlternateBase, QColor(0x54, 0x54, 0x54));
+
     return palette;
 }
 
