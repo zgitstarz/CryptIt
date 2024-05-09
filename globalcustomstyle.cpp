@@ -25,14 +25,47 @@ void GlobalCustomStyle::drawPrimitive(PrimitiveElement element, const QStyleOpti
 
 }
 
+void buttonDraw(const QStyleOption* opt, QPainter* painter, const QWidget* w)
+{
+
+    if(!(opt->state & QStyle::State_Enabled))
+    {
+        painter->setBrush(QColor(0xbe, 0xc0, 0xc1));
+        painter->setPen(QColor(0x54, 0x54, 0x54));
+        painter->setOpacity(0.5);
+    }
+    else if(opt->state & QStyle::State_MouseOver || opt->state & QStyle::State_Sunken)
+    {
+        painter->setBrush(QColor(0xbe, 0xc0, 0xc1));
+        painter->setPen(QPen(QColor(0xff, 0xd7, 0x00), 2));
+    }
+
+    else
+    {
+        painter->setBrush(QColor(0xbe, 0xc0, 0xc1));
+        painter->setPen(QColor(0x54, 0x54, 0x54));
+    }
+
+    painter->drawRoundedRect(opt->rect, 6, 6);
+
+}
+
 
 void GlobalCustomStyle::drawControl(ControlElement element, const QStyleOption *option,
                  QPainter *painter, const QWidget *widget) const
 {
+    painter->setRenderHint(QPainter::Antialiasing);
+
     switch(element)
     {
+
+    case ControlElement::CE_PushButtonBevel:
+        buttonDraw(option, painter, widget);
+        break;
+
     default:
         super::drawControl(element, option, painter, widget);
+        break;
     }
 }
 
