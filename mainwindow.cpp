@@ -85,6 +85,7 @@ void MainWindow::on_ClearButton_clicked()
     ui->PassPhraseLine->clear();
     ui->NameLineEdit->clear();
     ui->EmailLineEdit->clear();
+    ui->RSAInfoLabel->hide();
 }
 
 
@@ -92,5 +93,6 @@ void MainWindow::on_AESClearButton_clicked()
 {
     ui->AESPathLineEdit->clear();
     ui->FileNameLineEditAES->clear();
+    ui->AESInfoLabel->hide();
 }
 
