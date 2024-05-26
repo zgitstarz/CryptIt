@@ -1,5 +1,9 @@
 #include "mainwindow.h"
 
+#include <cryptopp/cryptlib.h>
+#include <cryptopp/base64.h>
+
+
 #include <QApplication>
 #include <QPalette>
 #include <QLinearGradient>
@@ -26,6 +30,10 @@ QPalette default_palette()
 
 int main(int argc, char *argv[])
 {
+
+    CryptoPP::Base64Encoder enc;
+
+
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
