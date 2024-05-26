@@ -103,8 +103,6 @@ void MainWindow::on_AESClearButton_clicked()
     ui->AESTextEdit->clear();
 }
 
-#include <fstream>
-
 
 void MainWindow::saveFile(int alg)
 {
